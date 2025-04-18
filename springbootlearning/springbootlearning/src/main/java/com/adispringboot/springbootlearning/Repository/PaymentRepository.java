@@ -15,11 +15,12 @@ public class PaymentRepository {
     private PaymentEntity executeQuery(PaymentRequest request){
         // connect with DB and fetch data
 
-        PaymentEntity payment = new PaymentEntity();
-        payment.setId(request.getPaymentId());
-        payment.setPaymentCurrency("INR");
-        payment.setPaymentAmount(100);
-        return payment;
+//        PaymentEntity payment = new PaymentEntity();
+//        payment.setId(request.getPaymentId());
+//        payment.setPaymentCurrency("INR");
+//        payment.setPaymentAmount(100);
+//        return payment;
+        return null;
     }
 
 

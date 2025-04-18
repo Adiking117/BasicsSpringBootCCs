@@ -1,6 +1,7 @@
 package com.adispringboot.springbootlearning.Controller;
 
 import com.adispringboot.springbootlearning.DTO.PaymentResponse;
+import com.adispringboot.springbootlearning.Entity.OrderEntity;
 import com.adispringboot.springbootlearning.Service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,9 @@ public class PaymentController {
     @Autowired
     PaymentService paymentService;
 
+//    @Autowired
+//    OrderEntity orderEntity;
+
     @GetMapping("/{id}")
     public ResponseEntity<PaymentResponse> getPaymentById(@PathVariable Long id){
 
@@ -32,5 +36,10 @@ public class PaymentController {
         return ResponseEntity.ok(payment);
 
     }
+
+//    @GetMapping("/test")
+//    public String getTest(){
+//        return orderEntity.getOrder();
+//    }
 
 }
