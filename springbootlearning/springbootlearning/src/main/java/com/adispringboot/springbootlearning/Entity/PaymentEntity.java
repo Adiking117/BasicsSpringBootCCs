@@ -1,10 +1,7 @@
 package com.adispringboot.springbootlearning.Entity;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,12 +12,16 @@ public class PaymentEntity {
     private String userEmail;
 
      // 2 nd to called
+    @Qualifier("onlineOrder")
     @Autowired
-    private OrderEntity orderEntity;
+//    private final OrderEntity orderEntity;
+    // Spring's dependency injection mechanism works by setting the field value after the constructor is called.
 
-    @Autowired
-    @Lazy
-    private OrderEntity orderEntity1;
+    private Order order;
+
+//    @Autowired
+//    @Lazy
+//    private OrderEntity orderEntity1;
 
 //    // 3 rd to called
 //    @PostConstruct
@@ -46,10 +47,10 @@ public class PaymentEntity {
     }
      // // Error while starting application , therefore Bean comes into picture
 
-    public void accessOrder() {
-        System.out.println("Accessing Order bean");
-        System.out.println(orderEntity1.getOrder());
-    }
+//    public void accessOrder() {
+//        System.out.println("Accessing Order bean");
+//        System.out.println(orderEntity1.getOrder());
+//    }
 
 
     public Long getId() {

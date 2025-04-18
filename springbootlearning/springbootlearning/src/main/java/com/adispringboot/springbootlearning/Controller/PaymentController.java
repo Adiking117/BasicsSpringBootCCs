@@ -1,7 +1,6 @@
 package com.adispringboot.springbootlearning.Controller;
 
 import com.adispringboot.springbootlearning.DTO.PaymentResponse;
-import com.adispringboot.springbootlearning.Entity.OrderEntity;
 import com.adispringboot.springbootlearning.Service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
