@@ -10,7 +10,7 @@ public class TestsApplication {
 	public static void main(String[] args) {
 
 		ConfigurableApplicationContext context = SpringApplication.run(TestsApplication.class, args);
-		//context.close();
+		// context.close();
 	}
 
 }

@@ -3,14 +3,18 @@ package com.adi.learning.tests.Controller;
 import com.adi.learning.tests.Entity.Account;
 import com.adi.learning.tests.Entity.User;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/tests/1/")
-// @Scope(value= ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-// @Scope("request")
+// @Scope(value= ConfigurableBeanFactory.SCOPE_PROTOTYPE) // Every time called new instance created
+// @Scope("request") // Every HTTP request
+// @Lazy // One time new instance
 public class BeanScopesTestController {
 
     //@Autowired
