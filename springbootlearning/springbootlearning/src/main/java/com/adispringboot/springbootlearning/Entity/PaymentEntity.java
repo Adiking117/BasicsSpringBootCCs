@@ -12,11 +12,10 @@ public class PaymentEntity {
     private String userEmail;
 
      // 2 nd to called
-    @Qualifier("onlineOrder")
+    // @Qualifier("onlineOrder")
     @Autowired
 //    private final OrderEntity orderEntity;
     // Spring's dependency injection mechanism works by setting the field value after the constructor is called.
-
     private Order order;
 
 //    @Autowired
@@ -47,10 +46,10 @@ public class PaymentEntity {
     }
      // // Error while starting application , therefore Bean comes into picture
 
-//    public void accessOrder() {
-//        System.out.println("Accessing Order bean");
-//        System.out.println(orderEntity1.getOrder());
-//    }
+    public void accessOrder() {
+        System.out.println("Accessing Order bean");
+        System.out.println(order.getOrder());
+    }
 
 
     public Long getId() {

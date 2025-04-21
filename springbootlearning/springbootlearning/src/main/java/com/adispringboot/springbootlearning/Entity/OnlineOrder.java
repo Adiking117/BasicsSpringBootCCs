@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+// @Qualifier("onlineOrder")
+// @Component
 // @Lazy
 // @Scope("prototype") // // uncomment this for getting new instnace each time
-//@Primary
-@Qualifier("onlineOrder")
+// @Primary
 public class OnlineOrder implements Order {
 
     // @Autowired
